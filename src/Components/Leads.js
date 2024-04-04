@@ -26,7 +26,7 @@ const Leads = () => {
   React.useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://15.207.21.52/");
+        const response = await axios.get("http://127.0.0.1:8000/");
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -205,7 +205,7 @@ const Leads = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch("http://15.207.21.52/", {
+      const response = await fetch("http://127.0.0.1:8000/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
